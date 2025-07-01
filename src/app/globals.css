@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 100% 5%;
+    --foreground: 276 80% 90%;
+    
+    --card: 270 50% 8%;
+    --card-foreground: 276 80% 90%;
+    
+    --popover: 270 100% 5%;
+    --popover-foreground: 276 80% 90%;
+    
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 285 50% 15%;
+    --secondary-foreground: 276 80% 90%;
+    
+    --muted: 285 50% 15%;
+    --muted-foreground: 276 80% 70%;
+    
+    --accent: 285 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 285 50% 30%;
+    --input: 285 50% 20%;
+    --ring: 16 100% 50%;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 270 100% 5%;
+    --foreground: 276 80% 90%;
+    
+    --card: 270 50% 8%;
+    --card-foreground: 276 80% 90%;
+    
+    --popover: 270 100% 5%;
+    --popover-foreground: 276 80% 90%;
+    
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 285 50% 15%;
+    --secondary-foreground: 276 80% 90%;
+    
+    --muted: 285 50% 15%;
+    --muted-foreground: 276 80% 70%;
+    
+    --accent: 285 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 285 50% 30%;
+    --input: 285 50% 20%;
+    --ring: 16 100% 50%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .cyberpunk-bg {
+    background-color: hsl(var(--background));
+    background-image: radial-gradient(at 20% 20%, hsl(var(--primary) / 0.1) 0px, transparent 50%),
+                      radial-gradient(at 80% 20%, hsl(var(--accent) / 0.1) 0px, transparent 50%),
+                      radial-gradient(at 20% 80%, hsl(var(--accent) / 0.1) 0px, transparent 50%),
+                      radial-gradient(at 80% 80%, hsl(var(--primary) / 0.1) 0px, transparent 50%);
+  }
+}
